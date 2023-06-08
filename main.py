@@ -5,7 +5,7 @@ from discord.ext import commands
 import time
 from keepalive import keep_alive
 
-token = os.environ['token_justwait']
+token = "TOKEN" #your token
 
 global daten
 daten = []
@@ -39,7 +39,7 @@ def entferne_kanal_aus_datei(dateiname, kanal_name):
     schreibe_daten_in_datei(dateiname, daten)
 
 async def check_role(roles):
-    role_list = ['Freund', '(Admin)', 'Member', 'Delta Force', 'BOT', 'Task Force']  # Liste der erlaubten Rollen
+    role_list = ['Rolle 1', 'Rolle 2']  # Liste der erlaubten Rollen
 
     for role in roles:
         if role in role_list:
@@ -74,7 +74,7 @@ async def on_message(message):
     channel_id = message.channel.id
     author = message.author.name
     channel = bot.get_channel(1116039835828883507)  # knockknock logs
-    channel_list = ["Zzz", "das-büro", "╔┃Rekruten", "╠┃Lobby 1", "╠┃Lobby 2", "╠┃Lobby 3", "╠┃Lobby 4", "╠┃Mission 1", "╠┃Mission 2", "╠┃Ausbildung 1", "╠┃Ausbildung 2", "╠┃Ausbildung 3", "╠┃Pausenraum", "╠┃Event Vorbereitung", "╠┃Team 1", "╠┃Team 2", "╠┃Büro Maurica", "╚┃Parlament Büro", "╠┃Generäle", "╠┃Büro ByD", "╠┃Büro Iceman/Blackstar", "╚┃Büro Reiner", "╠┃Verwaltungs-Talk", "╠┃Büro Albert", "╚┃Büro Frank Reich", "╚┃Feldjäger-Talk", "╚┃Infanterie", "╚┃Fallschirmjäger Talk", "╠┃Luftwaffe", "╚┃Leitung", "╚┃Gebirgsjäger", "╠┃Delta-Talk", "╚┃Auszubildende", "╚┃Einzelkämpfer Talk", "╚┃Panzergrenadiere", "╚┃Talk", "Büro Developer",]
+    channel_list = ["channel 1", "channel 2", "..."] #alle voice channels
   
     if message.channel.id == 1115370144617730158:
         # Ignore messages from the bot itself to avoid loops
